@@ -1,0 +1,43 @@
+[tool.uv]
+package = true
+
+[project]
+name = "graphrag-copilot"
+version = "0.1.0"
+description = "GraphRAG Financial Research Copilot"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic>=2",
+    "pydantic-settings",
+    "sqlalchemy>=2",
+    "alembic",
+    "psycopg[binary]",
+    "redis",
+    "qdrant-client",
+    "neo4j",
+    "boto3",
+    "httpx",
+    "python-multipart",
+    "pyjwt[crypto]",
+    "structlog",
+    "prometheus-client",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "httpx",
+    "ruff",
+    "mypy",
+    "types-requests",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
