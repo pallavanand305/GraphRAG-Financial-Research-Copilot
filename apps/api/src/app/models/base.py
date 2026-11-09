@@ -1,8 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey, Enum, JSON, Text, UniqueConstraint
-from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import declarative_base
-import uuid
-from datetime import datetime
 import enum
 
 Base = declarative_base()
